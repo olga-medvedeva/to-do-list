@@ -1,0 +1,189 @@
+body {
+    display: block;
+    background-color: rgba(127, 72, 162, 0.7);
+    height: 100%;
+    width: 100%;
+}
+
+body, input, button {
+    font-family: 'Varela Round', sans-serif;
+}
+
+.container {
+    background-color: white;
+    width: 800px;
+    margin: 100px auto 0 auto;
+    padding-top: 50px;
+    border-radius: 50px;
+    height: 700px;
+}
+
+h1 {
+    text-align: center;
+    margin: auto;
+    font-size: 40px;
+}
+
+.task-adder {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 30px 0;
+}
+
+#input-task {
+    height: 35px;
+    border: none;
+    width: 500px;
+}
+
+#input-task:focus {
+    outline: none;
+}
+
+.line {
+    height: 3px;
+    background-color: rgba(127, 72, 162, 0.7);
+    margin: 0;
+}
+
+#add-task-button {
+    margin-left: 10px;
+    width: 100px;
+    height: 40px;
+    background-color: rgba(127, 72, 162, 0.7);
+    color: white;
+    border-color: white;
+    border-radius: 3px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#task-list {
+    padding: 0;
+    margin: 0;
+}
+
+.tasks {
+    display: block;
+    max-height: 450px;
+    width: 98%;
+    margin: auto;
+    overflow-y: auto;
+}
+
+.tasks::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  .tasks::-webkit-scrollbar-track {
+    background-color: white;
+    border-radius: 5px;
+    margin-right: 2px;
+  }
+  
+  .tasks::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(127, 72, 162, 0.7);
+    margin-right: 2px;
+  }
+
+.task {
+    display: flex;
+    width: 610px;
+    margin: auto;
+    align-items: center;
+    height: 40px;
+    margin-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.check-as-done__checkbox {
+    margin-right: 25px;
+}
+
+
+.task-name {
+    margin-right: auto;
+}
+
+.delete-button {
+    margin-left: 25px;
+    margin-right: 3px;
+}
+
+.clear {
+    width: 100%;
+    padding: 0;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clear-button {
+    margin: auto;
+    width: 100px;
+    height: 40px;
+    background-color: rgba(127, 72, 162, 0.7);
+    color: white;
+    border-color: white;
+    border-radius: 3px;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.delete-button {
+    width: 30px;
+    height: 30px;
+    background-color: rgba(127, 72, 162, 0.7);
+    border-radius: 15px;
+    color: white;
+    border-color: white;
+    cursor: pointer;
+}
+
+.completed {
+    height: 100%;
+    width: 100%;
+    animation: colorchange 1s ease;
+    background-color: rgb(187, 221, 194);
+    display: flex;
+    margin: auto;
+    align-items: center;
+}
+
+.checkmark-button {
+    background: url(https://images.vexels.com/media/users/3/157932/isolated/preview/951a617272553f49e75548e212ed947f-curved-check-mark-icon-by-vexels.png) transparent no-repeat;
+    background-size: 30px;
+    height: 30px;
+    width: 30px;
+    margin-right: 3px;
+    border: none;
+    cursor: pointer;
+}
+    
+
+@keyframes colorchange {
+    from {
+        background-size: 200% 100%;
+        background-image: linear-gradient(to right, white 50%, rgb(187, 221, 194) 50%);
+    }
+
+    to {
+        background-size: 200% 100%;
+        background-image: linear-gradient(to right, white 50%, rgb(187, 221, 194) 50%);
+        background-position: -100%;
+    }
+}
+
+.completed span {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    padding: 0 20px 0 53px;
+}
